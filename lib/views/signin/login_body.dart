@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:nash_shop/models/product_model.dart';
+import 'package:nash_shop/views/homepage/home_page.dart';
+import 'package:nash_shop/views/signin/register.dart';
 
 class LoginBody extends StatelessWidget {
   
   TextEditingController emailController = TextEditingController();
    TextEditingController passwordController = TextEditingController();
+   Product? product;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -34,17 +38,20 @@ class LoginBody extends StatelessWidget {
           SizedBox(height: 12),
           ElevatedButton(
             onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (_)=>HomePage(product!)));
             },
             child: Text("Login"),
           ),
           SizedBox(height: 12),
           Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Text("Dont have an account?"),
               TextButton(
                 child: Text("Register"),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_)=>SignIn()));
+                },
               ),
             ],
           ),

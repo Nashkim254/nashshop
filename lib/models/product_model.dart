@@ -1,31 +1,31 @@
 class Product{
-  final String name;
-  final String description;
-  final int price;
+   String name;
+   String description;
+   int price;
 
-  Product({required this.name,required this.description,required this.price});
+  Product( this.name, this.description,this.price);
 
 
   List<Product> products = [
     Product(
-      name: 'shoe',
-      description: "This is a shoe",
-      price: 250
+       'shoe',
+       "This is a shoe",
+      250
     ),
      Product(
-      name: 'shoe',
-      description: "This is a shoe",
-      price: 250
+       'shoe',
+       "This is a shoe",
+       250
     ),
      Product(
-      name: 'shoe',
-      description: "This is a shoe",
-      price: 250
+       'shoe',
+      "This is a shoe",
+       250
     ),
      Product(
-      name: 'shoe',
-      description: "This is a shoe",
-      price: 250
+       'shoe',
+       "This is a shoe",
+     250
     ),
   ];
 }
