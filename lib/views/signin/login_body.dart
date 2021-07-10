@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nash_shop/models/product_model.dart';
-import 'package:nash_shop/views/homepage/home_page.dart';
 
 class LoginBody extends StatelessWidget {
-  LoginBody(this.product);
-   Product product;
+  
   TextEditingController emailController = TextEditingController();
    TextEditingController passwordController = TextEditingController();
   @override
@@ -37,8 +34,6 @@ class LoginBody extends StatelessWidget {
           SizedBox(height: 12),
           ElevatedButton(
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (_) => HomePage(product)));
             },
             child: Text("Login"),
           ),
